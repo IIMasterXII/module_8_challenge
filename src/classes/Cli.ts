@@ -288,11 +288,11 @@ class Cli {
         },
       ])
       .then((answers) => {
-        if(vehicle.vin === answers.vehicle.vin) {
+        if(vehicle.vin === answers.vehicleToTow.vin) {
           console.log('The truck cannot tow itself!');
           this.performActions();
         } else {
-          vehicle.tow(answers.vehicle);
+          vehicle.tow(answers.vehicleToTow);
           this.performActions();
         }
       });
